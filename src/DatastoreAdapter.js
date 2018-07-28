@@ -47,21 +47,14 @@ class DatastoreAdapter extends DatabaseAdapter {
     } else if (method === 'update') {
       key = this.datastore.key([kind, data.id])
     } else {
-      return callback(INVALID_METHOD, req, res)
+      return callback(INVALID_METHOD, req, res, null)
     }
-    this
-      .datastore
-      .save({
-        method: method,
-        key: key,
-        data: data
-      })
-      .then(() => {
-        callback(null, req, res)
-      })
-      .catch(err => {
-        callback(err, req, res)
-      })
+    var entity = {method, key, data}
+    this.datastore.save(entity).then(results => {
+      callback(null, req, res, entity.key.id)
+    }).catch(err => {
+      callback(err, req, res, null)
+    })
   }
 
   insert (req, res, kind, data, callback) {
