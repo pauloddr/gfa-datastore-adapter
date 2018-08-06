@@ -49,6 +49,7 @@ class DatastoreAdapter extends DatabaseAdapter {
     } else {
       return callback(INVALID_METHOD, req, res, null)
     }
+    delete data.id
     var entity = {method, key, data}
     this.datastore.save(entity).then(results => {
       callback(null, req, res, entity.key.id)
