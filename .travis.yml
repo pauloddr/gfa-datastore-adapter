@@ -5,6 +5,7 @@ cache:
 env:
   global:
   - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  - CLOUDSDK_CORE_PROJECT=test
 
 before_install:
 - if [ ! -d $HOME/google-cloud-sdk/bin ]; then
@@ -18,6 +19,7 @@ before_install:
 
 before_script:
 - gcloud beta emulators datastore start --consistency 1.0 --no-store-on-disk &
+- sleep 3
 - $(gcloud beta emulators datastore env-init)
 
 language: node_js
