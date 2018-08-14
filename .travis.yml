@@ -1,15 +1,3 @@
-sudo: required
-
-cache:
-  directories:
-    - "$HOME/google-cloud-sdk/"
-
-before_install:
-  - gcloud version || true
-  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
-  - source /home/travis/google-cloud-sdk/path.bash.inc
-  - gcloud components install cloud-datastore-emulator
-
 before_script:
 - gcloud beta emulators datastore start --consistency 1.0 --no-store-on-disk &
 - $(gcloud beta emulators datastore env-init)
