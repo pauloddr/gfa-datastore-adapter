@@ -12,6 +12,7 @@ before_install:
     curl https://sdk.cloud.google.com | bash > /dev/null;
   fi
 - source $HOME/google-cloud-sdk/path.bash.inc
+- gcloud components update beta
 - gcloud components update cloud-datastore-emulator
 - gcloud version
 
