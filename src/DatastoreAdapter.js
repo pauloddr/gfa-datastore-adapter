@@ -37,9 +37,10 @@ class DatastoreAdapter extends DatabaseAdapter {
       .runQuery(q)
       .then(results => {
         const resources = results[0]
-        var resource
+        var resource, key
         for (resource of resources) {
-          resource.id = resource[this.datastore.KEY].id
+          key = resource[this.datastore.KEY]
+          resource.id = key.name || key.id
         }
         callback(null, req, res, resources)
       }).catch(err => {
@@ -60,7 +61,7 @@ class DatastoreAdapter extends DatabaseAdapter {
     }
     var entity = {method, key, data}
     this.datastore.save(entity).then(results => {
-      callback(null, req, res, entity.key.id)
+      callback(null, req, res, entity.key.name || entity.key.id)
     }).catch(err => {
       callback(err, req, res, null)
     })
@@ -77,7 +78,7 @@ class DatastoreAdapter extends DatabaseAdapter {
   }
 
   delete (req, res, kind, id, callback) {
-    var key = this.datastore.key([kind, this.datastore.int(id)])
+    var key = this.generateKey(kind, id)
     this.datastore.delete(key, () => {
       callback(null, req, res)
     })

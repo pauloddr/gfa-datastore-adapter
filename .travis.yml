@@ -1,0 +1,17 @@
+dist: trusty
+  apt:
+    packages:
+    - google-cloud-sdk
+before_script:
+- gcloud beta emulators datastore start --consistency 1.0 --no-store-on-disk &
+- $(gcloud beta emulators datastore env-init)
+
+language: node_js
+node_js:
+  - "8"
+
+jobs:
+  include:
+    - stage: test
+      node_js: "8"
+      script: npm test && npm run coverage
