@@ -1,4 +1,6 @@
 dist: trusty
+
+addons:
   apt:
     packages:
     - google-cloud-sdk
