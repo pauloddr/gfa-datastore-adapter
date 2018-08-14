@@ -11,9 +11,9 @@ script:
   # Add gcloud to $PATH
   - source /home/travis/google-cloud-sdk/path.bash.inc
   - gcloud version
-  - gcloud components install cloud-datastore-emulator
 
 before_script:
+- gcloud components install cloud-datastore-emulator
 - gcloud beta emulators datastore start --consistency 1.0 --no-store-on-disk &
 - $(gcloud beta emulators datastore env-init)
 
