@@ -1,7 +1,8 @@
-dist: trusty
+addons:
   apt:
     packages:
     - google-cloud-sdk
+
 before_script:
 - gcloud beta emulators datastore start --consistency 1.0 --no-store-on-disk &
 - $(gcloud beta emulators datastore env-init)
