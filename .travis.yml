@@ -19,7 +19,7 @@ before_install:
 
 before_script:
 - gcloud beta emulators datastore start --consistency 1.0 --no-store-on-disk &
-- sleep 3
+- sleep 5
 - $(gcloud beta emulators datastore env-init)
 
 language: node_js
