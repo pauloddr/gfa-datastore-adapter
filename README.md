@@ -1,9 +1,9 @@
-# @gf-apis/datastore-adapter
+# @gfa/datastore-adapter
 
-[![Build Status](https://travis-ci.com/gf-apis/datastore-adapter.svg?branch=master)](https://travis-ci.com/gf-apis/datastore-adapter)
-[![Coverage Status](https://coveralls.io/repos/github/gf-apis/datastore-adapter/badge.svg?branch=master)](https://coveralls.io/github/gf-apis/datastore-adapter?branch=master)
+[![Build Status](https://travis-ci.com/pauloddr/gfa-datastore-adapter.svg?branch=master)](https://travis-ci.com/pauloddr/gfa-datastore-adapter)
+[![Coverage Status](https://coveralls.io/repos/github/pauloddr/gfa-datastore-adapter/badge.svg?branch=master)](https://coveralls.io/github/pauloddr/gfa-datastore-adapter?branch=master)
 
-[__Google Datastore__](https://github.com/googleapis/nodejs-datastore) adapter for [__@gf-apis__](https://github.com/gf-apis) components.
+[__Google Datastore__](https://github.com/googleapis/nodejs-datastore) adapter for [__@gfa/*__] components.
 
 ## Development
 

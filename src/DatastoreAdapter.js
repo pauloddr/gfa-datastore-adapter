@@ -1,6 +1,6 @@
 'use strict'
 
-const {DatabaseAdapter} = require('@gf-apis/core/adapters/DatabaseAdapter')
+const {DatabaseAdapter} = require('@gfa/core/adapters/DatabaseAdapter')
 const Datastore = require('@google-cloud/datastore')
 
 const INVALID_METHOD = new Error('INVALID_METHOD')

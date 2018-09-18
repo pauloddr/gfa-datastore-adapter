@@ -1,7 +1,7 @@
 'use strict'
 
 const DatastoreAdapter = require('../')
-const {behaves} = require('@gf-apis/core/test/behaviors/DatabaseAdapter')
+const {behaves} = require('@gfa/core/test/behaviors/DatabaseAdapter')
 
 describe('DatastoreAdapter', function () {
   before(function () {
