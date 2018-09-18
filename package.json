@@ -19,7 +19,7 @@
   "homepage": "https://github.com/pauloddr/gfa-datastore-adapter#readme",
   "dependencies": {
     "@gfa/core": "github:pauloddr/gfa-core",
-    "@google-cloud/datastore": "1.4.1"
+    "@google-cloud/datastore": "1.4.2"
   },
   "devDependencies": {
     "chai": "4.1.2",
