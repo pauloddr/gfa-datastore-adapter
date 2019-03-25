@@ -1,7 +1,12 @@
-# @gfa/datastore-adapter
+### THIS PROJECT HAS BEEN DISCONTINUED.
 
-[![Build Status](https://travis-ci.com/pauloddr/gfa-datastore-adapter.svg?branch=master)](https://travis-ci.com/pauloddr/gfa-datastore-adapter)
-[![Coverage Status](https://coveralls.io/repos/github/pauloddr/gfa-datastore-adapter/badge.svg?branch=master)](https://coveralls.io/github/pauloddr/gfa-datastore-adapter?branch=master)
+Read more [here](https://github.com/pauloddr/gfa-guides/blob/master/README.md).
+
+Original README archived below.
+
+---
+
+# @gfa/datastore-adapter
 
 [__Google Datastore__](https://github.com/googleapis/nodejs-datastore) adapter for [__@gfa/*__] components.
 
