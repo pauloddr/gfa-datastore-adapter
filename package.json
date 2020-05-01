@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "standard --fix && nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "homepage": "https://github.com/pauloddr/gfa-datastore-adapter#readme",
   "dependencies": {
     "@gfa/core": "github:pauloddr/gfa-core",
-    "@google-cloud/datastore": "2.0.0"
+    "@google-cloud/datastore": "2.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "4.2.0",
@@ -42,5 +45,6 @@
   },
   "standard": {
     "env": "mocha"
-  }
+  },
+  "snyk": true
 }
